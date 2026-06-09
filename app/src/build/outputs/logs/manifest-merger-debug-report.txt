@@ -1,0 +1,400 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:2:1-28:12
+MERGED from [androidx.compose.material3:material3-android:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\732c22e93df8a001802d8ddd11a38b09\transformed\material3\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.material:material-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\fd4feb67f3d88bb4bf787af1d2ae5b3a\transformed\material\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-ripple-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\acba1aaf66fb6bd8ad7099f7e3007836\transformed\material-ripple\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\8cd4f59e12222d1c780f467ebb01c065\transformed\foundation\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\7b9e2c255c813710da23d93a093b0bb3\transformed\animation\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\817ab2186b67422056e453f2c912a7d4\transformed\foundation-layout\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-core-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\7c71c4747115e51275ccfe4572f0af58\transformed\animation-core\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\7268a179b3b4dc210d70b79973858e97\transformed\ui-tooling-data\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-unit-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\d8a39c1687b7b2ee6184a1c982f57d2a\transformed\ui-unit\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-geometry-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\1ba0795769c7446b1bd0efa6eea889bd\transformed\ui-geometry\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-util-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\91619725d5a44e254859f70387a1e25b\transformed\ui-util\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-text-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\35e238f54a7966c5f1c9a1e00ad29ee1\transformed\ui-text\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\08d1a25fa39c37c70ef976ed4288d0ed\transformed\ui-tooling-preview\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-tooling-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\8989c58471bfba744a4317be3f4096e3\transformed\ui-tooling\AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.compose.ui:ui-graphics-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\5a75aa05e8c4467835f6244c5ae102a8\transformed\ui-graphics\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigationevent:navigationevent-android:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\6bff51a5423cd987995efc4598f79088\transformed\navigationevent\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigationevent:navigationevent-compose-android:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\cc7a027e0e479012ce121b258f67ad6c\transformed\navigationevent-compose\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-extended-android:1.7.8] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\f731508d5913a0ebc09f1a45881ef7b3\transformed\material-icons-extended-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.8] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\0a1d0823fd7f5d91cde5a01b76c6c002\transformed\material-icons-core-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\ba4c046754746ec5a2919b6794a1ea12\transformed\ui\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-test-manifest:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\f88c642d95b40f4c507bb7ff3aad7eec\transformed\ui-test-manifest-1.10.4\AndroidManifest.xml:17:1-29:12
+MERGED from [androidx.activity:activity-ktx:1.13.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\4d5c70897b24edcddfa1fa9b90ce54bf\transformed\activity-ktx-1.13.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity:1.13.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\484d546ac5e0d7e64983397a166a882a\transformed\activity-1.13.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-compose:1.13.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\f23038721bd9b7dff4b5c522ffe5faeb\transformed\activity-compose-1.13.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\18b5c88f8f60b3e1bfa604be1a66672d\transformed\autofill-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.6.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\ae39f33880b88c3891ff120f7efcdb10\transformed\transition-1.6.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.window:window-core-android:1.5.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\092536c64aebd7c9f630bc2c17606901\transformed\window-core\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.window:window:1.5.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\a7ff68e17eb1e6a71505ed8498e04633\transformed\window-1.5.0\AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.graphics:graphics-path:1.0.1] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\a0b9b0d46cef366366efec88ac5f61b5\transformed\graphics-path-1.0.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\e6057a561bc43fb9b0c46000e1632249\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\6576c1ab372e9d607a8bc4eecf2ef2b0\transformed\emoji2-1.4.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\1a17911d54455e3f75a49430336626a1\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\0f383ec662f7a133f86625e45b1906ba\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.18.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\dc859195371944bd91d8b4bd0e274f12\transformed\core-1.18.0\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\dd87b6fd32b7dd5218a341f84d3cee08\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.compose.runtime:runtime-annotation-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\33575954c7e1d2fe04f576fd25d2525f\transformed\runtime-annotation\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-retain-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\3d40596f0ea2b11aeab506b4e4b05340\transformed\runtime-retain\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\cbb026016c3a5a34fac59656fd8a8536\transformed\savedstate-ktx-1.4.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.savedstate:savedstate-android:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\26cd921e4d187929944b1e93a4fe7edf\transformed\savedstate\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-compose-android:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\80868bbcc9526f9fa623984fc9812e3d\transformed\savedstate-compose\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\e2060d4fc47c20daa39ad1252dd7291e\transformed\runtime\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\042131b48b11ca0d86da6040f9fb5262\transformed\runtime-saveable\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\b4195512c66295b0e0c32e9aec7b5c39\transformed\lifecycle-livedata-core-ktx-2.10.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\39d2d869bbe63df9add6ac7bdb9e9da9\transformed\lifecycle-livedata-2.10.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\16d7e792ac608ed3027d440860ae07d4\transformed\lifecycle-process-2.10.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\cb62582e9f41d06b771b247b215a33f1\transformed\lifecycle-livedata-core-2.10.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\414a8ec195f5ea3e9fe400741305b5b4\transformed\lifecycle-viewmodel-2.10.0\AndroidManifest.xml:2:1-5:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\3150f4fc51a14214cdd03377bbc6c81b\transformed\lifecycle-viewmodel\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\a3558e72a37832fb9369cd861d582fdc\transformed\lifecycle-runtime-compose\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\9aa8b7271041e8bbbd8882b3d37cb510\transformed\lifecycle-runtime\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\0a26ed8d4084b2198f6207344503522f\transformed\lifecycle-viewmodel-ktx-2.10.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\fca0d4c2848041f0e4c1a148a154cb48\transformed\lifecycle-runtime-ktx\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\8b7c2510402947d92428cf3f7aaec739\transformed\lifecycle-viewmodel-savedstate\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.18.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\364756bb0980ff63ec499049f57b5042\transformed\core-ktx-1.18.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\50bc436cb34cc21ca3a541b69fdf1e02\transformed\core-viewtree-1.0.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\2fd57202fc666d3cfc637aaff638552c\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\62819ebacd1e6408b97b024d07c206fd\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\09b3282b814fbfee07b37adcc3e9a81e\transformed\tracing-1.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\c8b1fe400b052dd2b5fc3625aa8c60b6\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\71d18998f22dd5c0587ad1ffe839de11\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\80c9f047bec1e1140a7575174fc51d78\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\01ee2e9d452328137201a12b314aa0ae\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\62f1cbfb55f0697996e7b13a1b38b6ff\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\3af522aa3626703d957dab76f0b5eb67\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+	package
+		INJECTED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:4:5-67
+	android:name
+		ADDED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:4:22-64
+application
+ADDED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:6:5-26:19
+INJECTED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:6:5-26:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\8989c58471bfba744a4317be3f4096e3\transformed\ui-tooling\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\8989c58471bfba744a4317be3f4096e3\transformed\ui-tooling\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\f88c642d95b40f4c507bb7ff3aad7eec\transformed\ui-test-manifest-1.10.4\AndroidManifest.xml:22:5-27:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\f88c642d95b40f4c507bb7ff3aad7eec\transformed\ui-test-manifest-1.10.4\AndroidManifest.xml:22:5-27:19
+MERGED from [androidx.window:window:1.5.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\a7ff68e17eb1e6a71505ed8498e04633\transformed\window-1.5.0\AndroidManifest.xml:22:5-29:19
+MERGED from [androidx.window:window:1.5.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\a7ff68e17eb1e6a71505ed8498e04633\transformed\window-1.5.0\AndroidManifest.xml:22:5-29:19
+MERGED from [androidx.emoji2:emoji2:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\6576c1ab372e9d607a8bc4eecf2ef2b0\transformed\emoji2-1.4.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\6576c1ab372e9d607a8bc4eecf2ef2b0\transformed\emoji2-1.4.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.18.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\dc859195371944bd91d8b4bd0e274f12\transformed\core-1.18.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.18.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\dc859195371944bd91d8b4bd0e274f12\transformed\core-1.18.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\16d7e792ac608ed3027d440860ae07d4\transformed\lifecycle-process-2.10.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\16d7e792ac608ed3027d440860ae07d4\transformed\lifecycle-process-2.10.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\62819ebacd1e6408b97b024d07c206fd\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\62819ebacd1e6408b97b024d07c206fd\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\71d18998f22dd5c0587ad1ffe839de11\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\71d18998f22dd5c0587ad1ffe839de11\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+	android:extractNativeLibs
+		INJECTED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.18.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\dc859195371944bd91d8b4bd0e274f12\transformed\core-1.18.0\AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:13:9-35
+	android:label
+		ADDED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:11:9-41
+	android:fullBackupContent
+		ADDED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:9:9-54
+	android:roundIcon
+		ADDED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:12:9-54
+	android:icon
+		ADDED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:10:9-43
+	android:allowBackup
+		ADDED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:7:9-35
+	android:theme
+		ADDED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:14:9-48
+	android:dataExtractionRules
+		ADDED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:8:9-65
+activity#co.edu.cecar.smartbooks.MainActivity
+ADDED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:15:9-25:20
+	android:label
+		ADDED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:18:13-45
+	android:exported
+		ADDED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:17:13-36
+	android:theme
+		ADDED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:19:13-52
+	android:name
+		ADDED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:16:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:20:13-24:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:21:17-69
+	android:name
+		ADDED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:21:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:23:17-77
+	android:name
+		ADDED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml:23:27-74
+uses-sdk
+INJECTED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml
+MERGED from [androidx.compose.material3:material3-android:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\732c22e93df8a001802d8ddd11a38b09\transformed\material3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3-android:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\732c22e93df8a001802d8ddd11a38b09\transformed\material3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\fd4feb67f3d88bb4bf787af1d2ae5b3a\transformed\material\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\fd4feb67f3d88bb4bf787af1d2ae5b3a\transformed\material\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\acba1aaf66fb6bd8ad7099f7e3007836\transformed\material-ripple\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\acba1aaf66fb6bd8ad7099f7e3007836\transformed\material-ripple\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\8cd4f59e12222d1c780f467ebb01c065\transformed\foundation\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\8cd4f59e12222d1c780f467ebb01c065\transformed\foundation\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\7b9e2c255c813710da23d93a093b0bb3\transformed\animation\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\7b9e2c255c813710da23d93a093b0bb3\transformed\animation\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\817ab2186b67422056e453f2c912a7d4\transformed\foundation-layout\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\817ab2186b67422056e453f2c912a7d4\transformed\foundation-layout\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\7c71c4747115e51275ccfe4572f0af58\transformed\animation-core\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\7c71c4747115e51275ccfe4572f0af58\transformed\animation-core\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\7268a179b3b4dc210d70b79973858e97\transformed\ui-tooling-data\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\7268a179b3b4dc210d70b79973858e97\transformed\ui-tooling-data\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\d8a39c1687b7b2ee6184a1c982f57d2a\transformed\ui-unit\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\d8a39c1687b7b2ee6184a1c982f57d2a\transformed\ui-unit\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\1ba0795769c7446b1bd0efa6eea889bd\transformed\ui-geometry\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\1ba0795769c7446b1bd0efa6eea889bd\transformed\ui-geometry\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\91619725d5a44e254859f70387a1e25b\transformed\ui-util\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\91619725d5a44e254859f70387a1e25b\transformed\ui-util\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\35e238f54a7966c5f1c9a1e00ad29ee1\transformed\ui-text\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\35e238f54a7966c5f1c9a1e00ad29ee1\transformed\ui-text\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\08d1a25fa39c37c70ef976ed4288d0ed\transformed\ui-tooling-preview\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\08d1a25fa39c37c70ef976ed4288d0ed\transformed\ui-tooling-preview\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\8989c58471bfba744a4317be3f4096e3\transformed\ui-tooling\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\8989c58471bfba744a4317be3f4096e3\transformed\ui-tooling\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\5a75aa05e8c4467835f6244c5ae102a8\transformed\ui-graphics\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\5a75aa05e8c4467835f6244c5ae102a8\transformed\ui-graphics\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigationevent:navigationevent-android:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\6bff51a5423cd987995efc4598f79088\transformed\navigationevent\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigationevent:navigationevent-android:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\6bff51a5423cd987995efc4598f79088\transformed\navigationevent\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigationevent:navigationevent-compose-android:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\cc7a027e0e479012ce121b258f67ad6c\transformed\navigationevent-compose\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigationevent:navigationevent-compose-android:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\cc7a027e0e479012ce121b258f67ad6c\transformed\navigationevent-compose\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.7.8] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\f731508d5913a0ebc09f1a45881ef7b3\transformed\material-icons-extended-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.7.8] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\f731508d5913a0ebc09f1a45881ef7b3\transformed\material-icons-extended-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.8] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\0a1d0823fd7f5d91cde5a01b76c6c002\transformed\material-icons-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.8] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\0a1d0823fd7f5d91cde5a01b76c6c002\transformed\material-icons-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\ba4c046754746ec5a2919b6794a1ea12\transformed\ui\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\ba4c046754746ec5a2919b6794a1ea12\transformed\ui\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\f88c642d95b40f4c507bb7ff3aad7eec\transformed\ui-test-manifest-1.10.4\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\f88c642d95b40f4c507bb7ff3aad7eec\transformed\ui-test-manifest-1.10.4\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.13.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\4d5c70897b24edcddfa1fa9b90ce54bf\transformed\activity-ktx-1.13.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.13.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\4d5c70897b24edcddfa1fa9b90ce54bf\transformed\activity-ktx-1.13.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity:1.13.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\484d546ac5e0d7e64983397a166a882a\transformed\activity-1.13.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.13.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\484d546ac5e0d7e64983397a166a882a\transformed\activity-1.13.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-compose:1.13.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\f23038721bd9b7dff4b5c522ffe5faeb\transformed\activity-compose-1.13.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.13.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\f23038721bd9b7dff4b5c522ffe5faeb\transformed\activity-compose-1.13.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\18b5c88f8f60b3e1bfa604be1a66672d\transformed\autofill-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\18b5c88f8f60b3e1bfa604be1a66672d\transformed\autofill-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.6.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\ae39f33880b88c3891ff120f7efcdb10\transformed\transition-1.6.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.transition:transition:1.6.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\ae39f33880b88c3891ff120f7efcdb10\transformed\transition-1.6.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.window:window-core-android:1.5.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\092536c64aebd7c9f630bc2c17606901\transformed\window-core\AndroidManifest.xml:5:5-44
+MERGED from [androidx.window:window-core-android:1.5.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\092536c64aebd7c9f630bc2c17606901\transformed\window-core\AndroidManifest.xml:5:5-44
+MERGED from [androidx.window:window:1.5.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\a7ff68e17eb1e6a71505ed8498e04633\transformed\window-1.5.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.window:window:1.5.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\a7ff68e17eb1e6a71505ed8498e04633\transformed\window-1.5.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.graphics:graphics-path:1.0.1] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\a0b9b0d46cef366366efec88ac5f61b5\transformed\graphics-path-1.0.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.graphics:graphics-path:1.0.1] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\a0b9b0d46cef366366efec88ac5f61b5\transformed\graphics-path-1.0.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\e6057a561bc43fb9b0c46000e1632249\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\e6057a561bc43fb9b0c46000e1632249\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\6576c1ab372e9d607a8bc4eecf2ef2b0\transformed\emoji2-1.4.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\6576c1ab372e9d607a8bc4eecf2ef2b0\transformed\emoji2-1.4.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\1a17911d54455e3f75a49430336626a1\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\1a17911d54455e3f75a49430336626a1\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\0f383ec662f7a133f86625e45b1906ba\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\0f383ec662f7a133f86625e45b1906ba\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.18.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\dc859195371944bd91d8b4bd0e274f12\transformed\core-1.18.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.18.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\dc859195371944bd91d8b4bd0e274f12\transformed\core-1.18.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\dd87b6fd32b7dd5218a341f84d3cee08\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\dd87b6fd32b7dd5218a341f84d3cee08\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.compose.runtime:runtime-annotation-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\33575954c7e1d2fe04f576fd25d2525f\transformed\runtime-annotation\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-annotation-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\33575954c7e1d2fe04f576fd25d2525f\transformed\runtime-annotation\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-retain-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\3d40596f0ea2b11aeab506b4e4b05340\transformed\runtime-retain\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-retain-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\3d40596f0ea2b11aeab506b4e4b05340\transformed\runtime-retain\AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\cbb026016c3a5a34fac59656fd8a8536\transformed\savedstate-ktx-1.4.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\cbb026016c3a5a34fac59656fd8a8536\transformed\savedstate-ktx-1.4.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate-android:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\26cd921e4d187929944b1e93a4fe7edf\transformed\savedstate\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-android:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\26cd921e4d187929944b1e93a4fe7edf\transformed\savedstate\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-compose-android:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\80868bbcc9526f9fa623984fc9812e3d\transformed\savedstate-compose\AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate-compose-android:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\80868bbcc9526f9fa623984fc9812e3d\transformed\savedstate-compose\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\e2060d4fc47c20daa39ad1252dd7291e\transformed\runtime\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\e2060d4fc47c20daa39ad1252dd7291e\transformed\runtime\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\042131b48b11ca0d86da6040f9fb5262\transformed\runtime-saveable\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\042131b48b11ca0d86da6040f9fb5262\transformed\runtime-saveable\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\b4195512c66295b0e0c32e9aec7b5c39\transformed\lifecycle-livedata-core-ktx-2.10.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\b4195512c66295b0e0c32e9aec7b5c39\transformed\lifecycle-livedata-core-ktx-2.10.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\39d2d869bbe63df9add6ac7bdb9e9da9\transformed\lifecycle-livedata-2.10.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\39d2d869bbe63df9add6ac7bdb9e9da9\transformed\lifecycle-livedata-2.10.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\16d7e792ac608ed3027d440860ae07d4\transformed\lifecycle-process-2.10.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\16d7e792ac608ed3027d440860ae07d4\transformed\lifecycle-process-2.10.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\cb62582e9f41d06b771b247b215a33f1\transformed\lifecycle-livedata-core-2.10.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\cb62582e9f41d06b771b247b215a33f1\transformed\lifecycle-livedata-core-2.10.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\414a8ec195f5ea3e9fe400741305b5b4\transformed\lifecycle-viewmodel-2.10.0\AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\414a8ec195f5ea3e9fe400741305b5b4\transformed\lifecycle-viewmodel-2.10.0\AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\3150f4fc51a14214cdd03377bbc6c81b\transformed\lifecycle-viewmodel\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\3150f4fc51a14214cdd03377bbc6c81b\transformed\lifecycle-viewmodel\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\a3558e72a37832fb9369cd861d582fdc\transformed\lifecycle-runtime-compose\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\a3558e72a37832fb9369cd861d582fdc\transformed\lifecycle-runtime-compose\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\9aa8b7271041e8bbbd8882b3d37cb510\transformed\lifecycle-runtime\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\9aa8b7271041e8bbbd8882b3d37cb510\transformed\lifecycle-runtime\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\0a26ed8d4084b2198f6207344503522f\transformed\lifecycle-viewmodel-ktx-2.10.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\0a26ed8d4084b2198f6207344503522f\transformed\lifecycle-viewmodel-ktx-2.10.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\fca0d4c2848041f0e4c1a148a154cb48\transformed\lifecycle-runtime-ktx\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\fca0d4c2848041f0e4c1a148a154cb48\transformed\lifecycle-runtime-ktx\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\8b7c2510402947d92428cf3f7aaec739\transformed\lifecycle-viewmodel-savedstate\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\8b7c2510402947d92428cf3f7aaec739\transformed\lifecycle-viewmodel-savedstate\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.18.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\364756bb0980ff63ec499049f57b5042\transformed\core-ktx-1.18.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.18.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\364756bb0980ff63ec499049f57b5042\transformed\core-ktx-1.18.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\50bc436cb34cc21ca3a541b69fdf1e02\transformed\core-viewtree-1.0.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\50bc436cb34cc21ca3a541b69fdf1e02\transformed\core-viewtree-1.0.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\2fd57202fc666d3cfc637aaff638552c\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\2fd57202fc666d3cfc637aaff638552c\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\62819ebacd1e6408b97b024d07c206fd\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\62819ebacd1e6408b97b024d07c206fd\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\09b3282b814fbfee07b37adcc3e9a81e\transformed\tracing-1.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\09b3282b814fbfee07b37adcc3e9a81e\transformed\tracing-1.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\c8b1fe400b052dd2b5fc3625aa8c60b6\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\c8b1fe400b052dd2b5fc3625aa8c60b6\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\71d18998f22dd5c0587ad1ffe839de11\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\71d18998f22dd5c0587ad1ffe839de11\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\80c9f047bec1e1140a7575174fc51d78\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\80c9f047bec1e1140a7575174fc51d78\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\01ee2e9d452328137201a12b314aa0ae\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\01ee2e9d452328137201a12b314aa0ae\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\62f1cbfb55f0697996e7b13a1b38b6ff\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\62f1cbfb55f0697996e7b13a1b38b6ff\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\3af522aa3626703d957dab76f0b5eb67\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\3af522aa3626703d957dab76f0b5eb67\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+	android:targetSdkVersion
+		INJECTED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\AndroidManifest.xml
+activity#androidx.compose.ui.tooling.PreviewActivity
+ADDED from [androidx.compose.ui:ui-tooling-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\8989c58471bfba744a4317be3f4096e3\transformed\ui-tooling\AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\8989c58471bfba744a4317be3f4096e3\transformed\ui-tooling\AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\8989c58471bfba744a4317be3f4096e3\transformed\ui-tooling\AndroidManifest.xml:24:13-71
+activity#androidx.activity.ComponentActivity
+ADDED from [androidx.compose.ui:ui-test-manifest:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\f88c642d95b40f4c507bb7ff3aad7eec\transformed\ui-test-manifest-1.10.4\AndroidManifest.xml:23:9-26:79
+	android:exported
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\f88c642d95b40f4c507bb7ff3aad7eec\transformed\ui-test-manifest-1.10.4\AndroidManifest.xml:25:13-36
+	android:theme
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\f88c642d95b40f4c507bb7ff3aad7eec\transformed\ui-test-manifest-1.10.4\AndroidManifest.xml:26:13-76
+	android:name
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.10.4] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\f88c642d95b40f4c507bb7ff3aad7eec\transformed\ui-test-manifest-1.10.4\AndroidManifest.xml:24:13-63
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.5.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\a7ff68e17eb1e6a71505ed8498e04633\transformed\window-1.5.0\AndroidManifest.xml:23:9-25:40
+	android:required
+		ADDED from [androidx.window:window:1.5.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\a7ff68e17eb1e6a71505ed8498e04633\transformed\window-1.5.0\AndroidManifest.xml:25:13-37
+	android:name
+		ADDED from [androidx.window:window:1.5.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\a7ff68e17eb1e6a71505ed8498e04633\transformed\window-1.5.0\AndroidManifest.xml:24:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.5.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\a7ff68e17eb1e6a71505ed8498e04633\transformed\window-1.5.0\AndroidManifest.xml:26:9-28:40
+	android:required
+		ADDED from [androidx.window:window:1.5.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\a7ff68e17eb1e6a71505ed8498e04633\transformed\window-1.5.0\AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from [androidx.window:window:1.5.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\a7ff68e17eb1e6a71505ed8498e04633\transformed\window-1.5.0\AndroidManifest.xml:27:13-51
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\6576c1ab372e9d607a8bc4eecf2ef2b0\transformed\emoji2-1.4.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\16d7e792ac608ed3027d440860ae07d4\transformed\lifecycle-process-2.10.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\16d7e792ac608ed3027d440860ae07d4\transformed\lifecycle-process-2.10.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\62819ebacd1e6408b97b024d07c206fd\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\62819ebacd1e6408b97b024d07c206fd\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\6576c1ab372e9d607a8bc4eecf2ef2b0\transformed\emoji2-1.4.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\6576c1ab372e9d607a8bc4eecf2ef2b0\transformed\emoji2-1.4.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\6576c1ab372e9d607a8bc4eecf2ef2b0\transformed\emoji2-1.4.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\6576c1ab372e9d607a8bc4eecf2ef2b0\transformed\emoji2-1.4.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\6576c1ab372e9d607a8bc4eecf2ef2b0\transformed\emoji2-1.4.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\6576c1ab372e9d607a8bc4eecf2ef2b0\transformed\emoji2-1.4.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\6576c1ab372e9d607a8bc4eecf2ef2b0\transformed\emoji2-1.4.0\AndroidManifest.xml:30:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.18.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\dc859195371944bd91d8b4bd0e274f12\transformed\core-1.18.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.18.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\dc859195371944bd91d8b4bd0e274f12\transformed\core-1.18.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.18.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\dc859195371944bd91d8b4bd0e274f12\transformed\core-1.18.0\AndroidManifest.xml:23:9-81
+permission#co.edu.cecar.smartbooks.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.18.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\dc859195371944bd91d8b4bd0e274f12\transformed\core-1.18.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.18.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\dc859195371944bd91d8b4bd0e274f12\transformed\core-1.18.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.18.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\dc859195371944bd91d8b4bd0e274f12\transformed\core-1.18.0\AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.18.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\dc859195371944bd91d8b4bd0e274f12\transformed\core-1.18.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.18.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\dc859195371944bd91d8b4bd0e274f12\transformed\core-1.18.0\AndroidManifest.xml:26:22-94
+uses-permission#co.edu.cecar.smartbooks.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.18.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\dc859195371944bd91d8b4bd0e274f12\transformed\core-1.18.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.18.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\dc859195371944bd91d8b4bd0e274f12\transformed\core-1.18.0\AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\16d7e792ac608ed3027d440860ae07d4\transformed\lifecycle-process-2.10.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\16d7e792ac608ed3027d440860ae07d4\transformed\lifecycle-process-2.10.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.10.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\16d7e792ac608ed3027d440860ae07d4\transformed\lifecycle-process-2.10.0\AndroidManifest.xml:30:17-78
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LUNA LOPEZ\.gradle\caches\9.4.1\transforms\83fbfe7d7eed34321771cc07cb688b2b\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92

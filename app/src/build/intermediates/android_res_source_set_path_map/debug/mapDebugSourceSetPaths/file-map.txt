@@ -1,0 +1,8 @@
+co.edu.cecar.smartbooks.app-pngs-0 C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\build\generated\res\pngs\debug
+co.edu.cecar.smartbooks.app-updated_navigation_xml-1 C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\build\generated\updated_navigation_xml\debug
+co.edu.cecar.smartbooks.app-packageDebugResources-2 C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+co.edu.cecar.smartbooks.app-packageDebugResources-3 C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+co.edu.cecar.smartbooks.app-debug-4 C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\build\intermediates\merged_res\debug\mergeDebugResources
+co.edu.cecar.smartbooks.app-debug-5 C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\debug\res
+co.edu.cecar.smartbooks.app-main-6 C:\Users\LUNA LOPEZ\AndroidStudioProjects\SmartBooks\app\src\main\res
+gradleHome-0 C:\Users\LUNA LOPEZ\.gradle
