@@ -20,7 +20,6 @@ class LotesViewModel(application: Application) : AndroidViewModel(application) {
     var isLoading = mutableStateOf(false)
         private set
 
-    // Este error queda única y exclusivamente reservado para fallas de carga del listado general
     var listErrorMessage = mutableStateOf<String?>(null)
         private set
 
@@ -39,7 +38,6 @@ class LotesViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    // El callback (onResult) ahora transfiere de vuelta el mensaje de error de forma directa a la interfaz local
     fun crearLote(numero: Int, onResult: (exito: Boolean, errorMsg: String?) -> Unit) {
         viewModelScope.launch {
             isLoading.value = true
@@ -48,9 +46,8 @@ class LotesViewModel(application: Application) : AndroidViewModel(application) {
                 val exito = repository.crearLote(token, numero)
                 if (exito) {
                     cargarLotes()
-                    onResult(true, null) // Todo correcto
+                    onResult(true, null)
                 } else {
-                    // Retorna el mensaje de error de inmediato a la UI sin guardarlo globalmente
                     onResult(false, "El lote '$numero' ya se encuentra registrado en el sistema.")
                 }
             } catch (e: Exception) {

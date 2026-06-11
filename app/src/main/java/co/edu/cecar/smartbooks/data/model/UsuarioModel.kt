@@ -15,7 +15,7 @@ data class UsuarioResponse(
 )
 
 @Serializable
-data class RegisterUsuarioDto(
+data class RegisterUsuario(
     @SerialName("Identificacion") val identificacion: String,
     @SerialName("Nombres") val nombres: String,
     @SerialName("Email") val email: String,
@@ -24,7 +24,7 @@ data class RegisterUsuarioDto(
 )
 
 @Serializable
-data class UpdateUsuarioDto(
+data class UpdateUsuario(
     @SerialName("Nombres") val nombres: String,
     @SerialName("Email") val email: String,
     @SerialName("Rol") val rol: Int,

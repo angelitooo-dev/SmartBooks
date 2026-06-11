@@ -14,7 +14,6 @@ class VentasRepository {
     private fun formatToken(token: String): String =
         if (token.startsWith("Bearer ")) token else "Bearer $token"
 
-    // GET /api/Ventas
     suspend fun obtenerVentas(token: String): List<VentaResponse> {
         val response = client.get(baseUrl) {
             header(HttpHeaders.Authorization, formatToken(token))
@@ -26,8 +25,6 @@ class VentasRepository {
             throw Exception("Error al cargar el historial de ventas (${response.status.value})")
         }
     }
-
-    // GET /api/Ventas/{id}
     suspend fun obtenerDetalleVenta(token: String, id: Int): VentaResponse {
         val response = client.get("$baseUrl/$id") {
             header(HttpHeaders.Authorization, formatToken(token))
@@ -40,8 +37,7 @@ class VentasRepository {
         }
     }
 
-    // POST /api/Ventas
-    suspend fun registrarVenta(token: String, request: RegistrarVentaDto): Boolean {
+    suspend fun registrarVenta(token: String, request: RegistrarVenta): Boolean {
         val response = client.post(baseUrl) {
             header(HttpHeaders.Authorization, formatToken(token))
             contentType(ContentType.Application.Json)

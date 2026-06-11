@@ -30,13 +30,11 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
-
-import co.edu.cecar.smartbooks.data.remote.RegisterUsuarioDto
-import co.edu.cecar.smartbooks.data.remote.UpdateUsuarioDto
+import co.edu.cecar.smartbooks.data.remote.RegisterUsuario
+import co.edu.cecar.smartbooks.data.remote.UpdateUsuario
 import co.edu.cecar.smartbooks.data.remote.UsuarioResponse
 import co.edu.cecar.smartbooks.viewmodel.UsuariosViewModel
 
-// IMPORTACIÓN DE COLORES
 import co.edu.cecar.smartbooks.ui.theme.RojoInstitucional
 import co.edu.cecar.smartbooks.ui.theme.AzulOscuroCDI
 import co.edu.cecar.smartbooks.ui.theme.GrisClaroTablas
@@ -118,7 +116,7 @@ fun UsuariosScreen(
         floatingActionButton = {
             FloatingActionButton(
                 onClick = { showDialogCrear = true },
-                containerColor = RojoInstitucional,
+                containerColor = RojoVivoInstitucional,
                 contentColor = BlancoFondo,
                 shape = RoundedCornerShape(14.dp)
             ) {
@@ -129,7 +127,7 @@ fun UsuariosScreen(
                 ) {
                     Icon(Icons.Default.Add, contentDescription = null, modifier = Modifier.size(20.dp))
                     Text(
-                        text = "Nuevo",
+                        text = " Nuevo Usuario",
                         style = MaterialTheme.typography.labelLarge.copy(fontSize = 14.sp)
                     )
                 }
@@ -144,8 +142,6 @@ fun UsuariosScreen(
                 .padding(horizontal = 16.dp, vertical = 12.dp),
             verticalArrangement = Arrangement.spacedBy(14.dp)
         ) {
-
-            // FILTROS CHIPS
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -234,7 +230,6 @@ fun UsuariosScreen(
                         else -> true
                     }
                 }
-
                 LazyColumn(
                     modifier = Modifier.weight(1f).fillMaxWidth(),
                     verticalArrangement = Arrangement.spacedBy(10.dp)
@@ -434,15 +429,14 @@ fun UsuarioWebCardItem(
     }
 }
 
-// 📝 DIÁLOGO: FORMULARIO CREAR / EDITAR USUARIO (MEJORADO)
 @Composable
 fun FormUsuarioRealDialog(
     titulo: String,
     usuarioExistente: UsuarioResponse?,
     viewModel: UsuariosViewModel,
     onDismiss: () -> Unit,
-    onGuardarCrear: (RegisterUsuarioDto) -> Unit,
-    onGuardarEditar: (Int, UpdateUsuarioDto) -> Unit
+    onGuardarCrear: (RegisterUsuario) -> Unit,
+    onGuardarEditar: (Int, UpdateUsuario) -> Unit
 ) {
     var nombres by remember { mutableStateOf(usuarioExistente?.nombres ?: "") }
     var identificacion by remember { mutableStateOf(usuarioExistente?.identificacion ?: "") }
@@ -522,7 +516,6 @@ fun FormUsuarioRealDialog(
 
                 HorizontalDivider(color = GrisClaroTablas)
 
-                // Segmento de Asignación de Rol
                 Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
                     Text("Rol Asignado", style = MaterialTheme.typography.labelSmall, color = Color.Gray)
                     Row(
@@ -567,9 +560,9 @@ fun FormUsuarioRealDialog(
                 onClick = {
                     if (nombres.isNotBlank() && email.isNotBlank()) {
                         if (usuarioExistente == null) {
-                            onGuardarCrear(RegisterUsuarioDto(identificacion, nombres, email, password, rolSeleccionado))
+                            onGuardarCrear(RegisterUsuario(identificacion, nombres, email, password, rolSeleccionado))
                         } else {
-                            onGuardarEditar(usuarioExistente.id ?: 0, UpdateUsuarioDto(nombres, email, rolSeleccionado, activo))
+                            onGuardarEditar(usuarioExistente.id ?: 0, UpdateUsuario(nombres, email, rolSeleccionado, activo))
                         }
                     }
                 },
@@ -587,10 +580,10 @@ fun FormUsuarioRealDialog(
     )
 }
 
-// 🔍 DIÁLOGO: DETALLE FICHA DE USUARIO (MEJORADO)
 @Composable
 fun DetalleUsuarioDialog(usuario: UsuarioResponse, textoRol: String, onDismiss: () -> Unit) {
     val isAdmin = textoRol.equals("Admin", ignoreCase = true)
+    val isActivo = usuario.activo == true
 
     AlertDialog(
         onDismissRequest = onDismiss,
@@ -622,7 +615,6 @@ fun DetalleUsuarioDialog(usuario: UsuarioResponse, textoRol: String, onDismiss: 
                         Text(usuario.nombres ?: "Desconocido", style = MaterialTheme.typography.bodyMedium, color = GrisOscuroTexto)
                     }
                 }
-
                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                     Icon(Icons.Outlined.Badge, null, tint = Color.Gray, modifier = Modifier.size(20.dp))
                     Column {
@@ -630,7 +622,6 @@ fun DetalleUsuarioDialog(usuario: UsuarioResponse, textoRol: String, onDismiss: 
                         Text(usuario.identificacion ?: "N/A", style = MaterialTheme.typography.bodyMedium, color = GrisOscuroTexto)
                     }
                 }
-
                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                     Icon(Icons.Outlined.Email, null, tint = Color.Gray, modifier = Modifier.size(20.dp))
                     Column {
@@ -638,10 +629,7 @@ fun DetalleUsuarioDialog(usuario: UsuarioResponse, textoRol: String, onDismiss: 
                         Text(usuario.email ?: "N/A", style = MaterialTheme.typography.bodyMedium, color = GrisOscuroTexto)
                     }
                 }
-
                 HorizontalDivider(color = GrisClaroTablas)
-
-                // Doble Fila de Badges para Estado y Rol Estéticos
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.spacedBy(10.dp)
@@ -651,20 +639,34 @@ fun DetalleUsuarioDialog(usuario: UsuarioResponse, textoRol: String, onDismiss: 
                         shape = RoundedCornerShape(6.dp),
                         modifier = Modifier.weight(1f)
                     ) {
-                        Column(modifier = Modifier.padding(8.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+                        Column(
+                            modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
                             Text("Rol", style = MaterialTheme.typography.labelSmall, color = Color.Gray)
-                            Text(if (isAdmin) "Administrador" else "Vendedor", color = if (isAdmin) RojoInstitucional else AzulOscuroCDI, style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Bold)
+                            Text(
+                                text = if (isAdmin) "Admin" else "Vendedor",
+                                color = if (isAdmin) RojoInstitucional else AzulOscuroCDI,
+                                style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold)
+                            )
                         }
                     }
 
                     Surface(
-                        color = if (usuario.activo == true) FondoVerdeActivo else RojoVivoInstitucional.copy(alpha = 0.06f),
+                        color = if (isActivo) FondoVerdeActivo else RojoVivoInstitucional.copy(alpha = 0.06f),
                         shape = RoundedCornerShape(6.dp),
                         modifier = Modifier.weight(1f)
                     ) {
-                        Column(modifier = Modifier.padding(8.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+                        Column(
+                            modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
                             Text("Estado", style = MaterialTheme.typography.labelSmall, color = Color.Gray)
-                            Text(if (usuario.activo == true) "Activo" else "Inactivo", color = if (usuario.activo == true) ColorVerdeActivo else RojoVivoInstitucional, style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Bold)
+                            Text(
+                                text = if (isActivo) "Activo" else "Inactivo",
+                                color = if (isActivo) ColorVerdeActivo else RojoVivoInstitucional,
+                                style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold)
+                            )
                         }
                     }
                 }
@@ -674,8 +676,7 @@ fun DetalleUsuarioDialog(usuario: UsuarioResponse, textoRol: String, onDismiss: 
             Button(
                 onClick = onDismiss,
                 colors = ButtonDefaults.buttonColors(containerColor = AzulOscuroCDI),
-                shape = RoundedCornerShape(8.dp),
-                modifier = Modifier.fillMaxWidth()
+                shape = RoundedCornerShape(8.dp)
             ) { Text("Cerrar Ficha", style = MaterialTheme.typography.labelLarge) }
         },
         shape = RoundedCornerShape(16.dp),

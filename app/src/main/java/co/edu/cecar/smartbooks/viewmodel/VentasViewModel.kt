@@ -15,7 +15,7 @@ class VentasViewModel(application: Application) : AndroidViewModel(application) 
     private val repository = VentasRepository()
     private val context = application.applicationContext
 
-    // Estados reactivos expuestos a la interfaz
+
     var listaVentas = mutableStateOf<List<VentaResponse>>(emptyList())
     var ventaDetalle = mutableStateOf<VentaResponse?>(null)
 
@@ -23,7 +23,6 @@ class VentasViewModel(application: Application) : AndroidViewModel(application) 
     var listErrorMessage = mutableStateOf<String?>(null)
     var operacionExitosa = mutableStateOf(false)
 
-    // Cesta mutable temporal para la UI
     val carritoTemp = mutableStateListOf<CarritoItem>()
 
     fun cargarVentas() {
@@ -56,7 +55,6 @@ class VentasViewModel(application: Application) : AndroidViewModel(application) 
     }
 
     fun agregarAlCarrito(item: CarritoItem) {
-        // Si el libro del mismo lote ya existe en la canasta, sumamos cantidades
         val indexExistente = carritoTemp.indexOfFirst { it.libroId == item.libroId && it.lote == item.lote }
         if (indexExistente != -1) {
             val antiguoItem = carritoTemp[indexExistente]
@@ -87,16 +85,15 @@ class VentasViewModel(application: Application) : AndroidViewModel(application) 
             try {
                 val token = TokenManager.getToken(context) ?: ""
 
-                // Mapeo estructurado desde CarritoItem hacia el DTO de inserción de la API
                 val itemsDto = carritoTemp.map {
-                    RegistrarVentaItemDto(
+                    RegistrarVentaItem(
                         libroId = it.libroId,
                         lote = it.lote,
                         cantidad = it.cantidad
                     )
                 }
 
-                val requestDto = RegistrarVentaDto(
+                val requestDto = RegistrarVenta(
                     identificacionCliente = identificacionCliente.trim(),
                     numeroComprobante = numeroComprobante.trim(),
                     observaciones = observaciones.trim(),
@@ -107,7 +104,7 @@ class VentasViewModel(application: Application) : AndroidViewModel(application) 
                 if (exito) {
                     carritoTemp.clear()
                     operacionExitosa.value = true
-                    cargarVentas() // Recarga el historial de manera inmediata
+                    cargarVentas()
                 } else {
                     listErrorMessage.value = "El servidor rechazó la operación. Verifique stock e identificación."
                 }

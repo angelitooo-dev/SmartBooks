@@ -4,8 +4,8 @@ import io.ktor.client.call.*
 import io.ktor.client.request.*
 import io.ktor.http.*
 import co.edu.cecar.smartbooks.core.network.HttpClientProvider
-import co.edu.cecar.smartbooks.data.remote.RegisterUsuarioDto
-import co.edu.cecar.smartbooks.data.remote.UpdateUsuarioDto
+import co.edu.cecar.smartbooks.data.remote.RegisterUsuario
+import co.edu.cecar.smartbooks.data.remote.UpdateUsuario
 import co.edu.cecar.smartbooks.data.remote.UsuarioResponse
 
 class UsuariosRepository {
@@ -38,7 +38,7 @@ class UsuariosRepository {
         return response.body()
     }
 
-    suspend fun registrarUsuario(token: String, request: RegisterUsuarioDto): Boolean {
+    suspend fun registrarUsuario(token: String, request: RegisterUsuario): Boolean {
         val response = client.post(baseUrl) {
             header(HttpHeaders.Authorization, formatToken(token))
             contentType(ContentType.Application.Json)
@@ -47,7 +47,7 @@ class UsuariosRepository {
         return response.status.isSuccess()
     }
 
-    suspend fun actualizarUsuario(token: String, id: Int, request: UpdateUsuarioDto): Boolean {
+    suspend fun actualizarUsuario(token: String, id: Int, request: UpdateUsuario): Boolean {
         val response = client.put("$baseUrl/$id") {
             header(HttpHeaders.Authorization, formatToken(token))
             contentType(ContentType.Application.Json)

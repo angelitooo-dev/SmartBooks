@@ -6,8 +6,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import co.edu.cecar.smartbooks.core.security.TokenManager
-import co.edu.cecar.smartbooks.data.remote.RegisterUsuarioDto
-import co.edu.cecar.smartbooks.data.remote.UpdateUsuarioDto
+import co.edu.cecar.smartbooks.data.remote.RegisterUsuario
+import co.edu.cecar.smartbooks.data.remote.UpdateUsuario
 import co.edu.cecar.smartbooks.data.remote.UsuarioResponse
 import co.edu.cecar.smartbooks.data.repository.UsuariosRepository
 import kotlinx.coroutines.launch
@@ -22,9 +22,9 @@ class UsuariosViewModel(application: Application) : AndroidViewModel(application
     var usuarioDetalle = mutableStateOf<UsuarioResponse?>(null)
     var perfilAutenticado = mutableStateOf<UsuarioResponse?>(null)
 
-    // ESTADOS DE CARGA
+
     var isLoading = mutableStateOf(false)
-    var isLoadingPerfil = mutableStateOf(false) // 👈 ESTO CORRIGE EL ERROR DE UNRESOLVED REFERENCE
+    var isLoadingPerfil = mutableStateOf(false)
 
     var mensajeError = mutableStateOf<String?>(null)
     var operacionExitosa = mutableStateOf(false)
@@ -71,7 +71,7 @@ class UsuariosViewModel(application: Application) : AndroidViewModel(application
         }
     }
 
-    fun registrarNuevoUsuario(dto: RegisterUsuarioDto) {
+    fun registrarNuevoUsuario(dto: RegisterUsuario) {
         viewModelScope.launch {
             isLoading.value = true
             mensajeError.value = null
@@ -89,7 +89,7 @@ class UsuariosViewModel(application: Application) : AndroidViewModel(application
         }
     }
 
-    fun editarUsuario(id: Int, dto: UpdateUsuarioDto) {
+    fun editarUsuario(id: Int, dto: UpdateUsuario) {
         viewModelScope.launch {
             isLoading.value = true
             try {

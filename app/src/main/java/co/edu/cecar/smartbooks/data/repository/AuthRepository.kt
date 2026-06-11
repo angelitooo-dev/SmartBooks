@@ -12,8 +12,6 @@ import io.ktor.http.isSuccess
 class AuthRepository {
     private val client = HttpClientProvider.client
     private val BASE_URL = "https://api.smartbooks.cecar.cloud"
-
-    // 1. POST /api/Seguridad/iniciar-sesion
     suspend fun login(correo: String, contrasena: String): Result<LoginResponse> {
         return try {
             val response = client.post("$BASE_URL/api/Seguridad/iniciar-sesion") {
@@ -34,7 +32,6 @@ class AuthRepository {
         }
     }
 
-    // 2. GET /api/Seguridad/verificar-correo
     suspend fun verificarCorreo(token: String): Result<String> {
         return try {
             val response = client.get("$BASE_URL/api/Seguridad/verificar-correo") {
@@ -47,7 +44,6 @@ class AuthRepository {
         }
     }
 
-    // 3. POST /api/Seguridad/solicitar-restablecimiento
     suspend fun solicitarRestablecimiento(correo: String): Result<String> {
         return try {
             val response = client.post("$BASE_URL/api/Seguridad/solicitar-restablecimiento") {
@@ -61,7 +57,6 @@ class AuthRepository {
         }
     }
 
-    // 4. POST /api/Seguridad/restablecer-contrasena
     suspend fun restablecerContrasena(codigo: String, nuevaPass: String): Result<String> {
         return try {
             val response = client.post("$BASE_URL/api/Seguridad/restablecer-contrasena") {

@@ -52,6 +52,7 @@ fun DashboardScreen(
     onIrAInventarios: () -> Unit,
     onIrAUsuarios: () -> Unit,
     onIrAVentas: () -> Unit,
+    onIrAIngresos: () -> Unit,
     modifier: Modifier = Modifier,
     viewModel: DashboardViewModel = viewModel(
         factory = viewModelFactory {
@@ -95,7 +96,6 @@ fun DashboardScreen(
             val listaVentasReales = state.ultimasVentas
             val totalVentasMesReal = state.ventasDelMesCount
             val totalIngresosMesReal = state.ingresosDelMesSum
-
 
             val nombreUsuario = data.mensajeBienvenida?.substringAfter(", ")?.trim() ?: "Usuario"
             val currency = NumberFormat.getCurrencyInstance(Locale("es", "CO")).apply { maximumFractionDigits = 0 }
@@ -171,7 +171,7 @@ fun DashboardScreen(
                             Image(
                                 painter = painterResource(id = R.drawable.cdi_logo),
                                 contentDescription = "Logo CDI",
-                                modifier = Modifier.width(150.dp).height(45.dp),
+                                modifier = Modifier.width(185.dp).height(55.dp), // Logo ampliado visualmente
                                 contentScale = ContentScale.Fit
                             )
                         },
@@ -275,21 +275,13 @@ fun DashboardScreen(
                         }
                     }
 
-                    Spacer(modifier = Modifier.height(16.dp))
-                    Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                        Button(onClick = onIrAClientes, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFEF4444)), modifier = Modifier.weight(1f)) {
-                            Text("+ Cliente", fontSize = 12.sp)
-                        }
-                        Button(onClick = onIrALibros, colors = ButtonDefaults.buttonColors(containerColor = AzulOscuroCDI), modifier = Modifier.weight(1f)) {
-                            Text("+ Libro", fontSize = 12.sp)
-                        }
-                    }
-
+                    // RESTAURADO: Sección de Otros módulos
                     Spacer(modifier = Modifier.height(20.dp))
                     Text("Otros módulos", fontSize = 15.sp, fontWeight = FontWeight.Bold, color = GrisOscuroTexto)
                     Spacer(modifier = Modifier.height(8.dp))
 
                     Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                        FilaModuloAdicional("Gestión de Ingresos", Icons.Outlined.AttachMoney, onIrAIngresos)
                         FilaModuloAdicional("Gestión de Lotes", Icons.Outlined.Layers, onIrALotes)
                         FilaModuloAdicional("Control de Inventario", Icons.Outlined.Inventory2, onIrAInventarios)
                         FilaModuloAdicional("Control de Usuarios", Icons.Outlined.ManageAccounts, onIrAUsuarios)
@@ -298,9 +290,6 @@ fun DashboardScreen(
                 }
             }
 
-            // ==========================================================
-            // DIÁLOGO MODAL: FICHA COMPLETA DE MI PERFIL (SINTAXIS FIJA)
-            // ==========================================================
             if (showDialogPerfil) {
                 AlertDialog(
                     onDismissRequest = { showDialogPerfil = false },

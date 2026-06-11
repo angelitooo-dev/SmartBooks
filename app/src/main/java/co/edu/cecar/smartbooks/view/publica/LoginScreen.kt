@@ -111,14 +111,12 @@ fun LoginScreen(
                     placeholder = "••••••••••••"
                 )
 
-                // COLUMNA CONTENEDORA QUE PONE UNO DEBAJO DEL OTRO ALINEADOS A LA IZQUIERDA
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(bottom = 20.dp),
                     horizontalAlignment = Alignment.Start
                 ) {
-                    // 1. Recordarme arriba
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
                         modifier = Modifier.offset(x = (-12).dp)
@@ -140,7 +138,6 @@ fun LoginScreen(
 
                     Spacer(modifier = Modifier.height(4.dp))
 
-                    // 2. ¿Olvidaste tu contraseña? abajo
                     Text(
                         text = "¿Olvidaste tu contraseña?",
                         color = RojoInstitucional,

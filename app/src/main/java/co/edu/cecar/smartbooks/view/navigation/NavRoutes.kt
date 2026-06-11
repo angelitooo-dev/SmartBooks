@@ -3,12 +3,10 @@ package co.edu.cecar.smartbooks.navigation
 import androidx.navigation3.runtime.NavKey
 import kotlinx.serialization.Serializable
 
-// RUTAS DEL MÓDULO PÚBLICO (AUTENTICACIÓN SEPARADA)
 @Serializable object LoginRoute : NavKey
 @Serializable object SolicitarOtpRoute : NavKey
 @Serializable object RestablecerPasswordRoute : NavKey
 
-// RUTAS DEL MÓDULO PRIVADO
 @Serializable object DashboardRoute : NavKey
 @Serializable object LibrosRoute : NavKey
 @Serializable object ClientesRoute : NavKey
@@ -17,3 +15,4 @@ import kotlinx.serialization.Serializable
 @Serializable object UsuariosRoute : NavKey
 @Serializable object PerfilUsuarioRoute : NavKey
 @Serializable object VentasRoute : NavKey
+@Serializable object IngresosRoute : NavKey

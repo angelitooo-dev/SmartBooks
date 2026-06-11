@@ -14,16 +14,14 @@ class LotesRepository {
     private fun formatToken(token: String): String =
         if (token.startsWith("Bearer ")) token else "Bearer $token"
 
-    // GET /api/Lotes - Versión definitiva sincronizada con tu API
     suspend fun obtenerLotes(token: String): List<LoteResponse> {
         val response = client.get(baseUrl) {
             header(HttpHeaders.Authorization, formatToken(token))
             accept(ContentType.Application.Json)
         }
-        return response.body() // Retorna directamente la lista de objetos LoteResponse
+        return response.body()
     }
 
-    // POST /api/Lotes
     suspend fun crearLote(token: String, numero: Int): Boolean {
         val response = client.post(baseUrl) {
             header(HttpHeaders.Authorization, formatToken(token))

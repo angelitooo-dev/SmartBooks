@@ -45,25 +45,20 @@ class DashboardViewModel(application: Application) : AndroidViewModel(applicatio
                     uiState = DashboardUiState.Error("Sesión inválida.")
                     return@launch
                 }
-
-                // Llamadas concurrentes seguras
                 val contadoresDeferred = async { dashboardRepository.obtenerDatosDashboard(token) }
                 val ventasDeferred = async { dashboardRepository.obtenerVentas(token) }
 
                 val contadoresResult = contadoresDeferred.await()
                 val ventasResult = ventasDeferred.await()
 
-                // Filtrar nulos desde la raíz
                 val ventasValidas = ventasResult.filterNotNull()
 
-                // Obtener el año y mes actual de forma segura (Ej: "2026-06")
                 val mesActualStr = try {
                     SimpleDateFormat("yyyy-MM", Locale.getDefault()).format(Date())
                 } catch (e: Exception) {
                     ""
                 }
 
-                // Filtrar las ventas pertenecientes al mes de forma ultra-segura
                 val ventasFiltradasMes = ventasValidas.filter { venta ->
                     val fechaVenta = venta.fecha
                     !fechaVenta.isNullOrBlank() && fechaVenta.startsWith(mesActualStr)
@@ -71,12 +66,10 @@ class DashboardViewModel(application: Application) : AndroidViewModel(applicatio
 
                 val totalVentasMesCalculado = ventasFiltradasMes.size
 
-                // Sumar totales asegurándonos de que si es null sume 0.0
                 val totalIngresosMesCalculado = ventasFiltradasMes.sumOf { venta ->
                     venta.total ?: 0.0
                 }
 
-                // Tomar las 3 últimas transacciones para el historial inferior
                 val ventasRecientes = ventasValidas.reversed().take(3)
 
                 uiState = DashboardUiState.Success(
@@ -87,7 +80,7 @@ class DashboardViewModel(application: Application) : AndroidViewModel(applicatio
                 )
 
             } catch (error: Exception) {
-                error.printStackTrace() // Esto te permite ver en el Logcat qué falló exactamente
+                error.printStackTrace()
                 uiState = DashboardUiState.Error("Error al procesar los datos de SmartBooks: ${error.localizedMessage}")
             }
         }

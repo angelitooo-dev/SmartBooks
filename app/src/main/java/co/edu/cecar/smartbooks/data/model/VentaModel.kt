@@ -26,21 +26,20 @@ data class VentaItemResponse(
 )
 
 @Serializable
-data class RegistrarVentaDto(
+data class RegistrarVenta(
     @SerialName("identificacionCliente") val identificacionCliente: String,
     @SerialName("numeroComprobante") val numeroComprobante: String,
     @SerialName("observaciones") val observaciones: String,
-    @SerialName("items") val items: List<RegistrarVentaItemDto>
+    @SerialName("items") val items: List<RegistrarVentaItem>
 )
 
 @Serializable
-data class RegistrarVentaItemDto(
+data class RegistrarVentaItem(
     @SerialName("libroId") val libroId: Int,
     @SerialName("lote") val lote: Int,
     @SerialName("cantidad") val cantidad: Int
 )
 
-// Estructura limpia para gestionar el estado de la cesta en Compose
 data class CarritoItem(
     val libroId: Int,
     val libroTitulo: String,

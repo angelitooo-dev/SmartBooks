@@ -49,7 +49,7 @@ class DashboardRepository {
         }
 
         if (response.status.isSuccess()) {
-            // Si el servidor devuelve null, nos aseguramos de retornar una lista vacía para evitar crashes
+
             return response.body<List<VentaResponse>?>() ?: emptyList()
         } else {
             throw Exception("Error Ventas: ${response.status.value}")

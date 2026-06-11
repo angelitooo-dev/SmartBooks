@@ -43,7 +43,6 @@ class InventariosViewModel(application: Application) : AndroidViewModel(applicat
                 val resultadoCompleto = inventariosRepository.obtenerDatosInventario(token, loteFiltro)
                 listaInventario.value = resultadoCompleto
 
-                // Cálculo automático de indicadores clave (KPIs)
                 totalLibros.value = resultadoCompleto.size
                 bajoStock.value = resultadoCompleto.count { (it.stockDisponible ?: 0) <= 5 }
                 stockTotalUnits.value = resultadoCompleto.sumOf { it.stockDisponible ?: 0 }

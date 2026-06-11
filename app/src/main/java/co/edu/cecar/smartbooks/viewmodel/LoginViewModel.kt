@@ -12,7 +12,6 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
     private val authRepository = AuthRepository()
     private val context = application.applicationContext
 
-    // Estados mutables para los campos de login
     var correo by mutableStateOf("")
         private set
     var contrasena by mutableStateOf("")
@@ -23,7 +22,6 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
     var errorMessage by mutableStateOf<String?>(null)
     var isLoading by mutableStateOf(false)
 
-    // Eventos de actualización de estado para las vistas independientes
     fun onCorreoChange(nuevoCorreo: String) {
         correo = nuevoCorreo
     }
