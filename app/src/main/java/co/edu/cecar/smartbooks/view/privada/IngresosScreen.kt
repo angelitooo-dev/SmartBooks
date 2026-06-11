@@ -5,19 +5,12 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBackIosNew
-import androidx.compose.material.icons.outlined.AttachMoney
-import androidx.compose.material.icons.outlined.CalendarMonth
-import androidx.compose.material.icons.outlined.Inventory2
-import androidx.compose.material.icons.outlined.Layers
-import androidx.compose.material.icons.outlined.LocalAtm
-import androidx.compose.material.icons.outlined.MenuBook
-import androidx.compose.material.icons.outlined.Numbers
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.outlined.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -33,10 +26,8 @@ import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import co.edu.cecar.smartbooks.ui.theme.AzulOscuroCDI
 import co.edu.cecar.smartbooks.ui.theme.BlancoFondo
-import co.edu.cecar.smartbooks.ui.theme.GrisClaroTablas
 import co.edu.cecar.smartbooks.ui.theme.GrisOscuroTexto
 import co.edu.cecar.smartbooks.ui.theme.RojoInstitucional
-import co.edu.cecar.smartbooks.ui.theme.RojoVivoInstitucional
 import co.edu.cecar.smartbooks.viewmodel.IngresosUiState
 import co.edu.cecar.smartbooks.viewmodel.IngresosViewModel
 import java.text.NumberFormat
@@ -57,7 +48,7 @@ fun IngresosScreen(
     )
 ) {
     var showModalCrear by remember { mutableStateOf(false) }
-    val currency = NumberFormat.getCurrencyInstance(Locale("es", "CO")).apply { maximumFractionDigits = 0 }
+    val currency = remember { NumberFormat.getCurrencyInstance(Locale("es", "CO")).apply { maximumFractionDigits = 0 } }
     val catalogoLibros = viewModel.librosDisponibles
 
     LaunchedEffect(Unit) {
@@ -65,61 +56,33 @@ fun IngresosScreen(
     }
 
     Scaffold(
-        modifier = modifier.statusBarsPadding(), // Añadido aquí para empujar toda la pantalla abajo y pintar la barra de estado de blanco
-        containerColor = GrisClaroTablas,
         topBar = {
-            Surface(
-                color = BlancoFondo, // Asegura el blanco absoluto arriba del título
-                tonalElevation = 2.dp,
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .background(BlancoFondo)
-                        .padding(horizontal = 16.dp, vertical = 18.dp),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    IconButton(onClick = onVolver) {
-                        Icon(
-                            imageVector = Icons.Default.ArrowBackIosNew,
-                            contentDescription = "Volver",
-                            tint = AzulOscuroCDI,
-                            modifier = Modifier.size(20.dp)
-                        )
-                    }
-                    Spacer(modifier = Modifier.width(4.dp))
+            TopAppBar(
+                title = {
                     Text(
-                        text = "Historial De Ingresos",
-                        style = MaterialTheme.typography.titleLarge.copy(
-                            fontSize = 20.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = AzulOscuroCDI
-                        )
+                        "Ingresos de Inventario",
+                        style = MaterialTheme.typography.titleLarge.copy(color = AzulOscuroCDI, fontWeight = FontWeight.Bold)
                     )
-                }
-            }
+                },
+                navigationIcon = {
+                    IconButton(onClick = onVolver) {
+                        Icon(Icons.Filled.ArrowBackIosNew, contentDescription = "Volver", tint = AzulOscuroCDI)
+                    }
+                },
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = BlancoFondo)
+            )
         },
         floatingActionButton = {
             ExtendedFloatingActionButton(
                 onClick = { showModalCrear = true },
-                containerColor = RojoVivoInstitucional,
+                containerColor = RojoInstitucional,
                 contentColor = BlancoFondo,
-                shape = RoundedCornerShape(16.dp),
-                text = {
-                    Text(
-                        text = "+ Nuevo Ingreso",
-                        style = MaterialTheme.typography.labelLarge.copy(
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 14.sp
-                        )
-                    )
-                },
-                icon = {}
+                icon = { Icon(Icons.Filled.Add, contentDescription = null) },
+                text = { Text("Nuevo Ingreso") }
             )
         }
     ) { paddingValues ->
-        Box(modifier = Modifier.fillMaxSize().padding(paddingValues)) {
+        Box(modifier = modifier.fillMaxSize().padding(paddingValues).background(Color(0xFFF9FAFB))) {
             when (val state = viewModel.uiState) {
                 is IngresosUiState.Loading -> {
                     CircularProgressIndicator(modifier = Modifier.align(Alignment.Center), color = RojoInstitucional)
@@ -130,163 +93,88 @@ fun IngresosScreen(
                         horizontalAlignment = Alignment.CenterHorizontally,
                         verticalArrangement = Arrangement.Center
                     ) {
-                        Text(text = state.message, color = MaterialTheme.colorScheme.error, style = MaterialTheme.typography.bodyMedium)
+                        Icon(imageVector = Icons.Outlined.Layers, contentDescription = null, tint = RojoInstitucional, modifier = Modifier.size(48.dp))
+                        Spacer(modifier = Modifier.height(8.dp))
+
+                        // SOLUCIÓN AL ERROR DE REFERENCIA: Texto seguro que no romperá la compilación
+                        Text(text = "Error al conectar con el servidor", color = GrisOscuroTexto, style = MaterialTheme.typography.bodyMedium)
+
                         Spacer(modifier = Modifier.height(16.dp))
-                        Button(onClick = { viewModel.cargarIngresos() }, colors = ButtonDefaults.buttonColors(containerColor = AzulOscuroCDI)) {
-                            Text("Reintentar", style = MaterialTheme.typography.labelLarge)
+                        Button(
+                            onClick = { viewModel.cargarIngresos() },
+                            colors = ButtonDefaults.buttonColors(containerColor = AzulOscuroCDI)
+                        ) {
+                            Text("Reintentar Carga")
                         }
                     }
                 }
                 is IngresosUiState.Success -> {
-                    val totalIngresos = state.lista.size
-                    val unidadesTotales = state.lista.sumOf { it.unidades ?: 0 }
-
-                    LazyColumn(
-                        contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 16.dp, bottom = 88.dp),
-                        verticalArrangement = Arrangement.spacedBy(14.dp),
-                        modifier = Modifier.fillMaxSize()
-                    ) {
-                        item {
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.spacedBy(12.dp)
-                            ) {
-                                Card(
-                                    modifier = Modifier.weight(1f),
-                                    shape = RoundedCornerShape(16.dp),
-                                    colors = CardDefaults.cardColors(containerColor = BlancoFondo),
-                                    elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
-                                ) {
-                                    Column(
-                                        modifier = Modifier.fillMaxWidth().padding(16.dp),
-                                        horizontalAlignment = Alignment.CenterHorizontally
-                                    ) {
-                                        Icon(Icons.Outlined.Inventory2, contentDescription = null, tint = RojoInstitucional, modifier = Modifier.size(22.dp))
-                                        Spacer(modifier = Modifier.height(4.dp))
-                                        Text(text = totalIngresos.toString(), style = MaterialTheme.typography.titleLarge.copy(fontSize = 20.sp, color = AzulOscuroCDI, fontWeight = FontWeight.Bold))
-                                        Spacer(modifier = Modifier.height(2.dp))
-                                        Text(text = "Total Ingresos", style = MaterialTheme.typography.labelSmall.copy(color = Color.Gray))
-                                    }
-                                }
-
-                                Card(
-                                    modifier = Modifier.weight(1f),
-                                    shape = RoundedCornerShape(16.dp),
-                                    colors = CardDefaults.cardColors(containerColor = BlancoFondo),
-                                    elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
-                                ) {
-                                    Column(
-                                        modifier = Modifier.fillMaxWidth().padding(16.dp),
-                                        horizontalAlignment = Alignment.CenterHorizontally
-                                    ) {
-                                        Icon(Icons.Outlined.Layers, contentDescription = null, tint = AzulOscuroCDI, modifier = Modifier.size(22.dp))
-                                        Spacer(modifier = Modifier.height(4.dp))
-                                        Text(text = unidadesTotales.toString(), style = MaterialTheme.typography.titleLarge.copy(fontSize = 20.sp, color = AzulOscuroCDI, fontWeight = FontWeight.Bold))
-                                        Spacer(modifier = Modifier.height(2.dp))
-                                        Text(text = "Unidades Totales", style = MaterialTheme.typography.labelSmall.copy(color = Color.Gray))
-                                    }
-                                }
-                            }
+                    if (state.lista.isEmpty()) {
+                        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                            Text("No hay registros de ingresos.", color = Color.Gray, style = MaterialTheme.typography.bodyMedium)
                         }
-
-                        if (state.lista.isEmpty()) {
-                            item {
-                                Box(modifier = Modifier.fillMaxWidth().padding(top = 40.dp), contentAlignment = Alignment.Center) {
-                                    Text("No se registran lotes comprados en el sistema.", style = MaterialTheme.typography.bodyMedium.copy(color = Color.Gray))
-                                }
-                            }
-                        } else {
+                    } else {
+                        // SOLUCIÓN AL ERROR DEL LAZYCOLUMN: Todo estructurado correctamente dentro de su contenedor nativo
+                        LazyColumn(
+                            modifier = Modifier.fillMaxSize().padding(horizontal = 16.dp, vertical = 8.dp),
+                            verticalArrangement = Arrangement.spacedBy(10.dp)
+                        ) {
                             items(state.lista) { ingreso ->
                                 val libroDelCatalogo = catalogoLibros.find { it.id == ingreso.libroId }
-                                val nombreLibro = libroDelCatalogo?.nombre ?: "Libro Desconocido"
 
                                 Card(
-                                    shape = RoundedCornerShape(16.dp),
+                                    modifier = Modifier.fillMaxWidth(),
                                     colors = CardDefaults.cardColors(containerColor = BlancoFondo),
-                                    elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
-                                    modifier = Modifier.fillMaxWidth()
+                                    elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
                                 ) {
-                                    Column(modifier = Modifier.padding(18.dp)) {
+                                    Column(modifier = Modifier.padding(16.dp).fillMaxWidth()) {
                                         Row(
                                             modifier = Modifier.fillMaxWidth(),
                                             horizontalArrangement = Arrangement.SpaceBetween,
                                             verticalAlignment = Alignment.CenterVertically
                                         ) {
                                             Text(
-                                                text = nombreLibro,
-                                                style = MaterialTheme.typography.titleLarge.copy(fontSize = 16.sp, color = RojoInstitucional, fontWeight = FontWeight.Bold),
+                                                text = libroDelCatalogo?.nombre ?: "Libro ID: ${ingreso.libroId ?: 0}",
+                                                style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold, color = AzulOscuroCDI),
                                                 modifier = Modifier.weight(1f)
                                             )
-                                        }
-
-                                        Spacer(modifier = Modifier.height(12.dp))
-
-                                        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-                                            Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                                                Row(verticalAlignment = Alignment.CenterVertically) {
-                                                    Icon(imageVector = Icons.Outlined.Numbers, contentDescription = null, tint = AzulOscuroCDI, modifier = Modifier.size(16.dp))
-                                                    Spacer(modifier = Modifier.width(8.dp))
-                                                    Column {
-                                                        Text(text = "N° LOTE", style = MaterialTheme.typography.labelSmall.copy(color = Color.Gray.copy(alpha = 0.7f), fontSize = 10.sp))
-                                                        Text(text = "Lote #${ingreso.lote ?: 0}", style = MaterialTheme.typography.bodyMedium.copy(color = AzulOscuroCDI, fontWeight = FontWeight.Bold))
-                                                    }
-                                                }
-                                                Row(verticalAlignment = Alignment.CenterVertically) {
-                                                    Icon(imageVector = Icons.Outlined.CalendarMonth, contentDescription = null, tint = AzulOscuroCDI, modifier = Modifier.size(16.dp))
-                                                    Spacer(modifier = Modifier.width(8.dp))
-                                                    Column {
-                                                        Text(text = "FECHA REGISTRO", style = MaterialTheme.typography.labelSmall.copy(color = Color.Gray.copy(alpha = 0.7f), fontSize = 10.sp))
-                                                        Text(text = ingreso.fechaRegistro?.take(10) ?: "N/A", style = MaterialTheme.typography.bodyMedium.copy(color = GrisOscuroTexto))
-                                                    }
-                                                }
-                                            }
-
-                                            Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                                                Row(verticalAlignment = Alignment.CenterVertically) {
-                                                    Icon(imageVector = Icons.Outlined.AttachMoney, contentDescription = null, tint = AzulOscuroCDI, modifier = Modifier.size(16.dp))
-                                                    Spacer(modifier = Modifier.width(8.dp))
-                                                    Column {
-                                                        Text(text = "COSTO ADQUISICIÓN", style = MaterialTheme.typography.labelSmall.copy(color = Color.Gray.copy(alpha = 0.7f), fontSize = 10.sp))
-                                                        Text(text = currency.format(ingreso.valorCompra ?: 0.0), style = MaterialTheme.typography.bodyMedium.copy(color = GrisOscuroTexto))
-                                                    }
-                                                }
-                                                Row(verticalAlignment = Alignment.CenterVertically) {
-                                                    Icon(imageVector = Icons.Outlined.LocalAtm, contentDescription = null, tint = AzulOscuroCDI, modifier = Modifier.size(16.dp))
-                                                    Spacer(modifier = Modifier.width(8.dp))
-                                                    Column {
-                                                        Text(text = "VALOR VENTA", style = MaterialTheme.typography.labelSmall.copy(color = Color.Gray.copy(alpha = 0.7f), fontSize = 10.sp))
-                                                        Text(text = currency.format(ingreso.valorVentaPublico ?: 0.0), style = MaterialTheme.typography.bodyMedium.copy(color = AzulOscuroCDI, fontWeight = FontWeight.Bold))
-                                                    }
-                                                }
+                                            Surface(
+                                                color = AzulOscuroCDI.copy(alpha = 0.1f),
+                                                shape = RoundedCornerShape(6.dp)
+                                            ) {
+                                                Text(
+                                                    text = "Lote: ${ingreso.lote ?: 0}",
+                                                    color = AzulOscuroCDI,
+                                                    style = MaterialTheme.typography.labelSmall,
+                                                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                                                )
                                             }
                                         }
 
-                                        Spacer(modifier = Modifier.height(16.dp))
+                                        Spacer(modifier = Modifier.height(8.dp))
+                                        HorizontalDivider(color = Color(0xFFE5E7EB))
+                                        Spacer(modifier = Modifier.height(8.dp))
 
                                         Row(
                                             modifier = Modifier.fillMaxWidth(),
-                                            horizontalArrangement = Arrangement.SpaceBetween,
-                                            verticalAlignment = Alignment.CenterVertically
+                                            horizontalArrangement = Arrangement.SpaceBetween
                                         ) {
-                                            Row(verticalAlignment = Alignment.CenterVertically) {
-                                                Icon(imageVector = Icons.Outlined.Inventory2, contentDescription = null, tint = Color.Gray.copy(alpha = 0.5f), modifier = Modifier.size(16.dp))
-                                                Spacer(modifier = Modifier.width(6.dp))
-                                                Text(text = "Unidades Ingresadas", style = MaterialTheme.typography.labelSmall.copy(color = Color.Gray.copy(alpha = 0.7f)))
+                                            Column {
+                                                Text("Unidades", style = MaterialTheme.typography.labelSmall, color = Color.Gray)
+                                                Row(verticalAlignment = Alignment.CenterVertically) {
+                                                    Icon(Icons.Outlined.Numbers, null, modifier = Modifier.size(16.dp), tint = Color.Gray)
+                                                    Spacer(modifier = Modifier.width(4.dp))
+                                                    Text("${ingreso.unidades ?: 0}", style = MaterialTheme.typography.bodyMedium, color = GrisOscuroTexto, fontWeight = FontWeight.Medium)
+                                                }
                                             }
-
-                                            val units = ingreso.unidades ?: 0
-                                            Box(
-                                                modifier = Modifier
-                                                    .background(RojoInstitucional.copy(alpha = 0.12f), RoundedCornerShape(8.dp))
-                                                    .padding(horizontal = 12.dp, vertical = 6.dp)
-                                            ) {
-                                                Text(
-                                                    text = "$units unds",
-                                                    color = RojoInstitucional,
-                                                    fontSize = 13.sp,
-                                                    fontWeight = FontWeight.ExtraBold,
-                                                    maxLines = 1
-                                                )
+                                            Column(horizontalAlignment = Alignment.End) {
+                                                Text("Costo Compra", style = MaterialTheme.typography.labelSmall, color = Color.Gray)
+                                                Text(currency.format(ingreso.valorCompra ?: 0.0), style = MaterialTheme.typography.bodyMedium, color = RojoInstitucional, fontWeight = FontWeight.Bold)
+                                            }
+                                            Column(horizontalAlignment = Alignment.End) {
+                                                Text("P. Venta Público", style = MaterialTheme.typography.labelSmall, color = Color.Gray)
+                                                // SOLUCIÓN AL UNRESOLVED REFERENCE: Se usa 'valorVentaPublico' que coincide exactamente con tu IngresoResponse
+                                                Text(currency.format(ingreso.valorVentaPublico ?: 0.0), style = MaterialTheme.typography.bodyMedium, color = Color(0xFF16A34A), fontWeight = FontWeight.Bold)
                                             }
                                         }
                                     }
@@ -307,22 +195,29 @@ fun IngresosScreen(
             title = {
                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     Icon(Icons.Outlined.Inventory2, contentDescription = null, tint = AzulOscuroCDI)
-                    Text("Nuevo Ingreso a Stock", style = MaterialTheme.typography.titleLarge.copy(fontSize = 18.sp, color = AzulOscuroCDI))
+                    Text("Registrar Ingreso", style = MaterialTheme.typography.titleLarge.copy(color = AzulOscuroCDI, fontWeight = FontWeight.Bold))
                 }
             },
             text = {
                 Column(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .heightIn(max = 400.dp)
-                        .verticalScroll(rememberScrollState()),
-                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                    verticalArrangement = Arrangement.spacedBy(12.dp),
+                    modifier = Modifier.fillMaxWidth()
                 ) {
                     if (viewModel.mensajeErrorFormulario != null) {
-                        Text(text = viewModel.mensajeErrorFormulario!!, color = MaterialTheme.colorScheme.error, style = MaterialTheme.typography.labelSmall.copy(fontSize = 12.sp, fontWeight = FontWeight.Bold))
+                        Surface(
+                            color = RojoInstitucional.copy(alpha = 0.1f),
+                            shape = RoundedCornerShape(8.dp),
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            Text(
+                                text = viewModel.mensajeErrorFormulario ?: "",
+                                color = RojoInstitucional,
+                                style = MaterialTheme.typography.bodySmall,
+                                modifier = Modifier.padding(10.dp)
+                            )
+                        }
                     }
 
-                    Text("Libro del Catálogo:", style = MaterialTheme.typography.bodyMedium.copy(fontSize = 12.sp, color = Color.Gray, fontWeight = FontWeight.Bold))
                     ExposedDropdownMenuBox(
                         expanded = libroExpandido,
                         onExpandedChange = { libroExpandido = !libroExpandido }
@@ -333,13 +228,8 @@ fun IngresosScreen(
                             readOnly = true,
                             leadingIcon = { Icon(Icons.Outlined.MenuBook, contentDescription = null, tint = AzulOscuroCDI) },
                             trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = libroExpandido) },
-                            colors = ExposedDropdownMenuDefaults.outlinedTextFieldColors(
-                                focusedTextColor = GrisOscuroTexto,
-                                unfocusedTextColor = GrisOscuroTexto
-                            ),
-                            textStyle = MaterialTheme.typography.bodyMedium,
-                            modifier = Modifier.fillMaxWidth().menuAnchor(),
-                            shape = RoundedCornerShape(8.dp)
+                            modifier = Modifier.menuAnchor().fillMaxWidth(),
+                            colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = AzulOscuroCDI, focusedLabelColor = AzulOscuroCDI)
                         )
                         ExposedDropdownMenu(
                             expanded = libroExpandido,
@@ -347,16 +237,14 @@ fun IngresosScreen(
                             modifier = Modifier.background(BlancoFondo)
                         ) {
                             if (catalogoLibros.isEmpty()) {
-                                DropdownMenuItem(text = { Text("Cargando catálogo...", style = MaterialTheme.typography.bodyMedium.copy(color = Color.Gray)) }, onClick = {})
+                                DropdownMenuItem(
+                                    text = { Text("No hay libros disponibles") },
+                                    onClick = {}
+                                )
                             } else {
                                 catalogoLibros.forEach { libro ->
                                     DropdownMenuItem(
-                                        text = {
-                                            Column {
-                                                Text(libro.nombre, style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold, color = GrisOscuroTexto))
-                                                Text("Nivel: ${libro.nivel} • Edición: ${libro.edicion}", style = MaterialTheme.typography.labelSmall.copy(color = Color.Gray))
-                                            }
-                                        },
+                                        text = { Text(libro.nombre) },
                                         onClick = {
                                             viewModel.libroSeleccionado = libro
                                             libroExpandido = false
@@ -370,53 +258,45 @@ fun IngresosScreen(
                     OutlinedTextField(
                         value = viewModel.loteInput,
                         onValueChange = { viewModel.loteInput = it },
-                        label = { Text("Número del Lote", style = MaterialTheme.typography.bodyMedium) },
+                        label = { Text("Código de Lote (Solo Números)") },
                         leadingIcon = { Icon(Icons.Outlined.Layers, contentDescription = null, tint = AzulOscuroCDI) },
                         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
-                        textStyle = MaterialTheme.typography.bodyMedium,
                         singleLine = true,
                         modifier = Modifier.fillMaxWidth(),
-                        shape = RoundedCornerShape(8.dp),
-                        colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = AzulOscuroCDI, unfocusedBorderColor = Color.LightGray)
+                        colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = AzulOscuroCDI, focusedLabelColor = AzulOscuroCDI)
                     )
 
                     OutlinedTextField(
                         value = viewModel.unidadesInput,
                         onValueChange = { viewModel.unidadesInput = it },
-                        label = { Text("Cantidad Unidades", style = MaterialTheme.typography.bodyMedium) },
+                        label = { Text("Unidades Disponibles") },
                         leadingIcon = { Icon(Icons.Outlined.Numbers, contentDescription = null, tint = AzulOscuroCDI) },
                         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
-                        textStyle = MaterialTheme.typography.bodyMedium,
                         singleLine = true,
                         modifier = Modifier.fillMaxWidth(),
-                        shape = RoundedCornerShape(8.dp),
-                        colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = AzulOscuroCDI, unfocusedBorderColor = Color.LightGray)
+                        colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = AzulOscuroCDI, focusedLabelColor = AzulOscuroCDI)
                     )
 
                     OutlinedTextField(
                         value = viewModel.valorCompraInput,
                         onValueChange = { viewModel.valorCompraInput = it },
-                        label = { Text("Costo Compra Unitario", style = MaterialTheme.typography.bodyMedium) },
-                        leadingIcon = { Icon(Icons.Outlined.AttachMoney, contentDescription = null, tint = AzulOscuroCDI) },
+                        label = { Text("Valor Unitario Compra ($)") },
+                        leadingIcon = { Icon(Icons.Outlined.LocalAtm, contentDescription = null, tint = AzulOscuroCDI) },
                         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
-                        textStyle = MaterialTheme.typography.bodyMedium,
                         singleLine = true,
                         modifier = Modifier.fillMaxWidth(),
-                        shape = RoundedCornerShape(8.dp),
-                        colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = AzulOscuroCDI, unfocusedBorderColor = Color.LightGray)
+                        colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = AzulOscuroCDI, focusedLabelColor = AzulOscuroCDI)
                     )
 
                     OutlinedTextField(
                         value = viewModel.valorVentaInput,
                         onValueChange = { viewModel.valorVentaInput = it },
-                        label = { Text("Precio Venta Público", style = MaterialTheme.typography.bodyMedium) },
-                        leadingIcon = { Icon(Icons.Outlined.LocalAtm, contentDescription = null, tint = AzulOscuroCDI) },
+                        label = { Text("Valor Unitario Venta Público ($)") },
+                        leadingIcon = { Icon(Icons.Outlined.AttachMoney, contentDescription = null, tint = AzulOscuroCDI) },
                         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
-                        textStyle = MaterialTheme.typography.bodyMedium,
                         singleLine = true,
                         modifier = Modifier.fillMaxWidth(),
-                        shape = RoundedCornerShape(8.dp),
-                        colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = AzulOscuroCDI, unfocusedBorderColor = Color.LightGray)
+                        colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = AzulOscuroCDI, focusedLabelColor = AzulOscuroCDI)
                     )
                 }
             },
@@ -428,15 +308,15 @@ fun IngresosScreen(
                     shape = RoundedCornerShape(8.dp)
                 ) {
                     if (viewModel.isGuardando) {
-                        CircularProgressIndicator(modifier = Modifier.size(16.dp), color = BlancoFondo, strokeWidth = 2.dp)
+                        CircularProgressIndicator(modifier = Modifier.size(18.dp), color = BlancoFondo, strokeWidth = 2.dp)
                     } else {
-                        Text("Registrar", style = MaterialTheme.typography.labelLarge)
+                        Text("Guardar Ingreso")
                     }
                 }
             },
             dismissButton = {
                 TextButton(onClick = { showModalCrear = false }, enabled = !viewModel.isGuardando) {
-                    Text("Cancelar", color = Color.Gray, style = MaterialTheme.typography.labelLarge)
+                    Text("Cancelar", color = RojoInstitucional)
                 }
             },
             containerColor = BlancoFondo,
