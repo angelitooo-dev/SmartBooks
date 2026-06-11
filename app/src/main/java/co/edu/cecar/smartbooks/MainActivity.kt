@@ -17,7 +17,6 @@ class MainActivity : ComponentActivity() {
         setContent {
             SmartBooksTheme {
                 Surface(modifier = Modifier.fillMaxSize()) {
-
                     AppNavigation()
                 }
             }
