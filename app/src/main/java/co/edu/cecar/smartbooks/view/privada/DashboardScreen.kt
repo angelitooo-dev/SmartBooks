@@ -52,6 +52,7 @@ fun DashboardScreen(
     onIrAInventarios: () -> Unit,
     onIrAUsuarios: () -> Unit,
     onIrAVentas: () -> Unit,
+    onIrAIngresos: () -> Unit,
     modifier: Modifier = Modifier,
     viewModel: DashboardViewModel = viewModel(
         factory = viewModelFactory {
@@ -95,7 +96,6 @@ fun DashboardScreen(
             val listaVentasReales = state.ultimasVentas
             val totalVentasMesReal = state.ventasDelMesCount
             val totalIngresosMesReal = state.ingresosDelMesSum
-
 
             val nombreUsuario = data.mensajeBienvenida?.substringAfter(", ")?.trim() ?: "Usuario"
             val currency = NumberFormat.getCurrencyInstance(Locale("es", "CO")).apply { maximumFractionDigits = 0 }
@@ -290,6 +290,7 @@ fun DashboardScreen(
                     Spacer(modifier = Modifier.height(8.dp))
 
                     Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                        FilaModuloAdicional("Gestión de Ingresos", Icons.Outlined.AttachMoney, onIrAIngresos)
                         FilaModuloAdicional("Gestión de Lotes", Icons.Outlined.Layers, onIrALotes)
                         FilaModuloAdicional("Control de Inventario", Icons.Outlined.Inventory2, onIrAInventarios)
                         FilaModuloAdicional("Control de Usuarios", Icons.Outlined.ManageAccounts, onIrAUsuarios)
@@ -298,9 +299,6 @@ fun DashboardScreen(
                 }
             }
 
-            // ==========================================================
-            // DIÁLOGO MODAL: FICHA COMPLETA DE MI PERFIL (SINTAXIS FIJA)
-            // ==========================================================
             if (showDialogPerfil) {
                 AlertDialog(
                     onDismissRequest = { showDialogPerfil = false },
